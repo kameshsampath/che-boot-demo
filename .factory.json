@@ -55,7 +55,7 @@
         "mixins": [],
         "problems": [],
         "name": "microspringboot",
-        "type": "blank",
+        "type": "maven",
         "path": "/microspringboot1",
         "attributes": {}
       }
