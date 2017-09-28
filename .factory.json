@@ -84,21 +84,6 @@
       }
     ]
   },
-  "policies": {
-    "create": "perClick"
-  },
-  "ide": {
-    "onProjectsLoaded": {
-      "actions": [
-        {
-          "id": "openPomFile",
-          "properties": {
-            "file": "/che-boot-demo/pom.xml"
-          }
-        }
-      ]
-    }
-  },
   "creator": {
     "name": "Kamesh Sampath",
     "email": "kamesh.sampath@hotmail.com"
