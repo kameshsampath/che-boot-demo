@@ -46,18 +46,24 @@
     ],
     "projects": [
       {
-        "description": "",
+        "description": "A Spring Boot Web Project with Che Factory",
         "source": {
-          "location": "https://github.com/skshiftio/microspringboot1",
+          "location": "https://github.com/kameshsampath/che-boot-demo",
           "type": "git",
           "parameters": {}
         },
-        "mixins": [],
+        "mixins": [
+          "git"
+        ],
         "problems": [],
-        "name": "microspringboot",
+        "name": "che-boot-demo",
         "type": "maven",
-        "path": "/microspringboot1",
-        "attributes": {}
+        "path": "/che-boot-demo",
+        "attributes": {
+          "language": [
+            "java"
+          ]
+        }
       }
     ],
     "defaultEnv": "default",
