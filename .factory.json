@@ -1,11 +1,50 @@
 {
   "v": "4.0",
-  "name": "che-boot-demo",
-  "creator": {
-    "name": "Kamesh Sampath",
-    "email": "kamesh.sampath@hotmail.com"
-  },
   "workspace": {
+    "environments": {
+      "che-boot-demo": {
+        "recipe": {
+          "location": "rhche/spring-boot",
+          "type": "dockerimage"
+        },
+        "machines": {
+          "dev-machine": {
+            "servers": {},
+            "agents": [
+              "org.eclipse.che.terminal",
+              "org.eclipse.che.ws-agent",
+              "org.eclipse.che.exec"
+            ],
+            "attributes": {
+              "memoryLimitBytes": "2147483648"
+            }
+          }
+        }
+      }
+    },
+    "defaultEnv": "che-boot-demo",
+    "projects": [
+      {
+        "links": [],
+        "description": "A Spring Boot Web Project with Che Factory",
+        "source": {
+          "location": "https://github.com/kameshsampath/che-boot-demo",
+          "type": "git",
+          "parameters": {}
+        },
+        "mixins": [],
+        "problems": [],
+        "name": "che-boot-demo",
+        "type": "maven",
+        "path": "/che-boot-demo",
+        "attributes": {
+          "language": [
+            "java"
+          ]
+        }
+      }
+    ],
+    "name": "che-boot-demo",
     "commands": [
       {
         "commandLine": "scl enable rh-maven33 'mvn install -f ${current.project.path}'",
@@ -43,51 +82,7 @@
           "previewUrl": "http://${server.port.8080}"
         }
       }
-    ],
-    "projects": [
-      {
-        "description": "A Spring Boot Web Project with Che Factory",
-        "source": {
-          "location": "https://github.com/kameshsampath/che-boot-demo",
-          "type": "git",
-          "parameters": {}
-        },
-        "mixins": [],
-        "problems": [],
-        "name": "che-boot-demo",
-        "type": "maven",
-        "path": "/che-boot-demo",
-        "attributes": {
-          "language": [
-            "java"
-          ]
-        }
-      }
-    ],
-    "defaultEnv": "che-boot-demo",
-    "name": "che-boot-demo",
-    "attributes": {},
-    "environments": {
-      "che-boot-demo": {
-        "recipe": {
-          "location": "rhche/spring-boot",
-          "type": "dockerimage"
-        },
-        "machines": {
-          "dev-machine": {
-            "servers": {},
-            "agents": [
-              "org.eclipse.che.terminal",
-              "org.eclipse.che.ws-agent",
-              "org.eclipse.che.exec"
-            ],
-            "attributes": {
-              "memoryLimitBytes": "2147483648"
-            }
-          }
-        }
-      }
-    }
+    ]
   },
   "policies": {
     "create": "perClick"
@@ -103,5 +98,9 @@
         }
       ]
     }
+  },
+  "creator": {
+    "name": "Kamesh Sampath",
+    "email": "kamesh.sampath@hotmail.com"
   }
 }
