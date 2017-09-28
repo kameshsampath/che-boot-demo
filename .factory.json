@@ -1,6 +1,6 @@
 {
   "v": "4.0",
-  "name": "sbweb",
+  "name": "che-boot-demo",
   "creator": {
     "name": "Kamesh Sampath",
     "email": "kamesh.sampath@hotmail.com"
@@ -52,9 +52,7 @@
           "type": "git",
           "parameters": {}
         },
-        "mixins": [
-          "git"
-        ],
+        "mixins": [],
         "problems": [],
         "name": "che-boot-demo",
         "type": "maven",
@@ -66,11 +64,11 @@
         }
       }
     ],
-    "defaultEnv": "default",
-    "name": "spring-boot-web",
+    "defaultEnv": "che-boot-demo",
+    "name": "che-boot-demo",
     "attributes": {},
     "environments": {
-      "default": {
+      "che-boot-demo": {
         "recipe": {
           "location": "rhche/spring-boot",
           "type": "dockerimage"
@@ -92,16 +90,18 @@
     }
   },
   "policies": {
-     "create": "perClick"
+    "create": "perClick"
   },
-  "ide":{
+  "ide": {
     "onProjectsLoaded": {
-       "actions": [{
+      "actions": [
+        {
           "id": "openPomFile",
           "properties": {
-             "file": "${current.project.path}/pom.xml"
+            "file": "/che-boot-demo/pom.xml"
           }
-       }]
+        }
+      ]
     }
   }
 }
