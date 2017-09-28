@@ -32,7 +32,10 @@
           "type": "git",
           "parameters": {}
         },
-        "mixins": [],
+        "mixins": [
+          "git",
+          "pullrequest"
+        ],
         "problems": [],
         "name": "che-boot-demo",
         "type": "maven",
@@ -91,7 +94,7 @@
     "onProjectsLoaded": {
       "actions": [
         {
-          "id": "openPomFile",
+          "id": "openFile",
           "properties": {
             "file": "/che-boot-demo/pom.xml"
           }
